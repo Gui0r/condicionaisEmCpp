@@ -7,17 +7,40 @@ using namespace std;
 int main(){
     setlocale(LC_ALL, "pt_BR.UTF-8");
 
-    int a, b, c, P, media, MP;  
+    int nota, MP, notaM = 10, notaRec, P;  
 
-    cout << "Digite suas notas em sequência: ";
-    cin >> a;
-    cin >> b;
-    cin >> c;
+    cout << "Digite sua nota: ";
+    cin >> nota;
+
+    cout << "Digite sua nota de recuperação: ";
+    cin >> notaRec;
+
+    MP = nota + notaRec;
 
     cout << "Digite sua presença em aula: ";
     cin >> P;
 
-    
+    if(P >= 75 && MP < 10){
+        cout << "Reprovado!";
+    }else if(MP <= 10 || P < 75){
+        cout << "Reprovado!";
+    }else if (P >= 75 && MP >= 10){
+        cout << "Aprovado!";
+    }else{
+        cout << "Reprovado!";
+    }
+
+/*
+    if(MP < 10){
+        cout << "Reprovado!";
+    }else if(MP > 10){
+        cout << "Aprovado!";
+    }else{
+        cout << "Reprovado!";
+    }
+*/
+}
+/*
     switch (media, MP)
     {
     case media > 7 && media < 5:
@@ -28,3 +51,4 @@ int main(){
         break;
     }
 }
+*/
